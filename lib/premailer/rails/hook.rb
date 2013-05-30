@@ -58,7 +58,7 @@ class Premailer
 
         Mail::Part.new(
           :content_type => "text/html; charset=#{html_part.charset}",
-          :body => premailer.to_inline_css)
+          :body => html_part.body.to_s)
       end
 
       def generate_text_part
